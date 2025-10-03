@@ -11,7 +11,6 @@ class Complexos{
         double Im;
     public:
         Complexos(double Re = 0, double Im = 0);
-        Complexos(double Re = 0);
         
         double getRe() const;
         double getIm() const;
@@ -29,5 +28,10 @@ class Complexos{
 
         friend ostream& operator<<(ostream& os, const Complexos& c);
 };
+
+    Complexos operator+(double lhs, const Complexos& rhs);
+    Complexos operator-(double lhs, const Complexos& rhs);
+    Complexos operator*(double lhs, const Complexos& rhs);
+    Complexos operator/(double lhs, const Complexos& rhs);
 
 #endif

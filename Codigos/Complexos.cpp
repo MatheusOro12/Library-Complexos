@@ -5,10 +5,6 @@ Complexos::Complexos(double Re, double Im) : Re(Re), Im(Im){
     
 }
 
-Complexos::Complexos(double Re) : Re(Re), Im(0){
-    
-}
-
 double Complexos::getAngulo() const{
     double tangente = Im/Re;
     return atan2(Im, Re) * 180 / M_PI;
@@ -46,6 +42,25 @@ Complexos Complexos::operator/(const Complexos& c) const{
     double denom = c.Re*c.Re + c.Im*c.Im;
     Complexos numer = (*this) * c.getConjugado();
     return Complexos(numer.Re/denom, numer.Im/denom);
+}
+
+Complexos operator+(double lhs, const Complexos& rhs){
+    return Complexos(lhs + rhs.getRe(), rhs.getIm());
+}
+
+Complexos operator-(double lhs, const Complexos& rhs){
+    return Complexos(lhs - rhs.getRe(), -rhs.getIm());
+}
+
+Complexos operator*(double lhs, const Complexos& rhs){
+    return Complexos(lhs * rhs.getRe(), lhs * rhs.getIm());
+}
+
+Complexos operator/(double lhs, const Complexos& rhs){
+    double denom = rhs.getRe() * rhs.getRe() + rhs.getIm() * rhs.getIm();
+    Complexos numer(lhs, 0);
+    Complexos res = numer * rhs.getConjugado();
+    return Complexos(res.getRe() / denom, res.getIm() / denom);
 }
 
 bool Complexos::operator==(const Complexos& c ) const{

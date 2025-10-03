@@ -5,6 +5,7 @@ int main(){
     Complexos num2(2, 2);
     Complexos num3(2, 2);
 
+    cout << "Funcoes de complexos: " << endl;
     cout << "Num1 angulo: " << num1.getAngulo() << endl;
     cout << "Num1 real: " << num1.getRe() << endl;
     cout << "Num1 imaginario: " << num1.getIm() << endl;
@@ -17,11 +18,23 @@ int main(){
     cout << "Num2 conjugado: " << num2.getConjugado() << endl;
     cout << "Num2 modulo: " << num2.getModulo() << endl;
     
+    cout << endl << "Operacao entre complexos: " << endl;
     cout << "Num1 + num2: " << num1 + num2 << endl;
     cout << "Num1 - num2: " << num1 - num2 << endl;
     cout << "Num1 * num2: " << num1 * num2 << endl;
     cout << "Num1 / num2: " << num1 / num2 << endl;
 
+    cout << endl << "Operacao complexos e real: " << endl;
+    cout << "Num1 + 5 " << num1 + 5 << endl;
+    cout << "Num1 - 5 " << num1 - 5 << endl;
+    cout << "Num1 * 5 " << num1 * 5 << endl;
+    cout << "Num1 / 5 " << num1 / 5 << endl;
+
+    cout << endl << "Operacao real e complexos: " << endl;
+    cout << "5 + num1 " << 5 + num1 << endl;
+    cout << "5 - num1 " << 5 - num1 << endl;
+    cout << "5 * num1 " << 5 * num1 << endl;
+    cout << "5 / num1 " << 5 / num1 << endl;
     if(num2 == num3)
         cout << "num2 == num3" << endl;
     else 
