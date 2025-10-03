@@ -4,6 +4,7 @@ int main(){
     Complexos num1(1, 1);
     Complexos num2(2, 2);
     Complexos num3(2, 2);
+    Complexos num4(7, 2);
 
     cout << "Funcoes de complexos: " << endl;
     cout << "Num1 angulo: " << num1.getAngulo() << endl;
@@ -39,4 +40,14 @@ int main(){
         cout << "num2 == num3" << endl;
     else 
         cout << "num2 != num3" << endl;
+
+    if (5 == (num4-num3))
+        cout << "5 == num4-num3" << endl;
+    else 
+        cout << "5 != num4-num3" << endl;
+    
+    if (num4-num3 == 5)
+        cout << "num4-num3 == 5" << endl;
+    else 
+        cout << "num4-num3 != 5" << endl;
 }

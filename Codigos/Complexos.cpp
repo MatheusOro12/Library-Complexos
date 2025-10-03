@@ -44,6 +44,16 @@ Complexos Complexos::operator/(const Complexos& c) const{
     return Complexos(numer.Re/denom, numer.Im/denom);
 }
 
+
+bool Complexos::operator==(const Complexos& c ) const{
+    return (this->Re == c.Re && this->Im == c.Im);
+}
+
+ostream& operator<<(ostream& os, const Complexos& c) {
+    os << c.Re << (c.Im < 0 ? "" : "+") << c.Im << "i";
+    return os;
+}
+
 Complexos operator+(double lhs, const Complexos& rhs){
     return Complexos(lhs + rhs.getRe(), rhs.getIm());
 }
@@ -63,11 +73,6 @@ Complexos operator/(double lhs, const Complexos& rhs){
     return Complexos(res.getRe() / denom, res.getIm() / denom);
 }
 
-bool Complexos::operator==(const Complexos& c ) const{
-    return (this->Re == c.Re && this->Im == c.Im);
-}
-
-ostream& operator<<(ostream& os, const Complexos& c) {
-    os << c.Re << (c.Im < 0 ? "" : "+") << c.Im << "i";
-    return os;
+bool operator==(double lhs, const Complexos& rhs){
+    return (lhs == rhs.getRe() && rhs.getIm() == 0);
 }

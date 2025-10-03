@@ -34,4 +34,6 @@ Complexos operator-(double lhs, const Complexos& rhs);
 Complexos operator*(double lhs, const Complexos& rhs);
 Complexos operator/(double lhs, const Complexos& rhs);
 
+bool operator==(double lhs, const Complexos& rhs);
+
 #endif
