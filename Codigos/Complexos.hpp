@@ -29,9 +29,9 @@ class Complexos{
         friend ostream& operator<<(ostream& os, const Complexos& c);
 };
 
-    Complexos operator+(double lhs, const Complexos& rhs);
-    Complexos operator-(double lhs, const Complexos& rhs);
-    Complexos operator*(double lhs, const Complexos& rhs);
-    Complexos operator/(double lhs, const Complexos& rhs);
+Complexos operator+(double lhs, const Complexos& rhs);
+Complexos operator-(double lhs, const Complexos& rhs);
+Complexos operator*(double lhs, const Complexos& rhs);
+Complexos operator/(double lhs, const Complexos& rhs);
 
 #endif
