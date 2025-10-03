@@ -25,7 +25,7 @@ class Complexos{
         Complexos operator*(const Complexos& c) const;
         Complexos operator/(const Complexos& c) const;
 
-
+        bool operator==(const Complexos& c) const;
 
         friend ostream& operator<<(ostream& os, const Complexos& c);
 };

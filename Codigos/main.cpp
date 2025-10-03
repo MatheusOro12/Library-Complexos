@@ -3,6 +3,7 @@
 int main(){
     Complexos num1(1, 1);
     Complexos num2(2, 2);
+    Complexos num3(2, 2);
 
     cout << "Num1 angulo: " << num1.getAngulo() << endl;
     cout << "Num1 real: " << num1.getRe() << endl;
@@ -21,4 +22,8 @@ int main(){
     cout << "Num1 * num2: " << num1 * num2 << endl;
     cout << "Num1 / num2: " << num1 / num2 << endl;
 
+    if(num2 == num3)
+        cout << "num2 == num3" << endl;
+    else 
+        cout << "num2 != num3" << endl;
 }
